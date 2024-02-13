@@ -1,23 +1,23 @@
-import React from "react";
 import React, { useRef } from "react";
-
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 const Invoice =()=>{
-    const pdfref = useRef();
+  
+  const pdfRef = useRef();
 
     return(
-        <section class="py-3 py-md-5" ref={pdfref}>
-            <div class="container">
-            <div class="row justify-content-center">
-            <div class="col-12 col-lg-9 col-xl-8 col-xxl-7">
-            <div class="row gy-3 mb-3">
-            <div class="col-6">
+      <section class="py-3 py-md-5" ref={pdfRef}>
+        <div class="container">
+        <div class="row justify-content-center">
+        <div class="col-12 col-lg-9 col-xl-8 col-xxl-7">
+        <div class="row gy-3 mb-3">
+        <div class="col-6">
             <h2 class="text-uppercase text-endx m-0">Invoice</h2>
           </div>
           <div class="col-6">
             <a class="d-block text-end" href="#!">
               <img src="./assets/img/bsb-logo.svg" class="img-fluid" alt="BootstrapBrain Logo" width="135" height="44"/>
-              </a>
+            </a>
           </div>
           <div class="col-12">
           <h4>From</h4>
@@ -30,11 +30,12 @@ const Invoice =()=>{
               Email: email@domain.com
             </address>
           </div>
-            </div>
-            <div class="row mb-3">
-          <div class="col-12 col-sm-6 col-md-8">
-          <h4>Bill To</h4>
-          <address>
+        </div>
+
+        <div class="row mb-3">
+        <div class="col-12 col-sm-6 col-md-8">
+        <h4>Bill To</h4>
+        <address>
               <strong>Mason Carter</strong><br/>
               7657 NW Prairie View Rd<br/>
               Kansas City, Mississippi, 64151<br/>
@@ -42,9 +43,10 @@ const Invoice =()=>{
               Phone: (816) 741-5790<br/>
               Email: email@client.com
             </address>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-            <h4 class="row">
+        </div>
+        
+        <div class="col-12 col-sm-6 col-md-4">
+        <h4 class="row">
               <span class="col-6">Invoice #</span>
               <span class="col-6 text-sm-end">INT-001</span>
             </h4>
@@ -58,13 +60,13 @@ const Invoice =()=>{
               <span class="col-6">Due Date</span>
               <span class="col-6 text-sm-end">18/12/2025</span>
             </div>
-            </div>
-          </div>
-          <div class="row mb-3">
-          <div class="col-12">
-            <div class="table-responsive">
-            <table class="table table-striped">
-            <thead>
+        </div>
+        </div>
+        <div class="row mb-3">
+        <div class="col-12">
+        <div class="table-responsive">
+        <table class="table table-striped">
+        <thead>
                   <tr>
                     <th scope="col" class="text-uppercase">Qty</th>
                     <th scope="col" class="text-uppercase">Product</th>
@@ -113,23 +115,23 @@ const Invoice =()=>{
                     <th scope="row" colspan="3" class="text-uppercase text-end">Total</th>
                     <td class="text-end">$495.1</td>
                   </tr>
-                  <tr>
-                    <td colspan="3" class="text-end">Shipping</td>
-                    <td class="text-end">15</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" colspan="3" class="text-uppercase text-end">Total</th>
-                    <td class="text-end">$495.1</td>
-                  </tr>
-                  </tbody>
-            </table>
-                </div>
-                </div>
+                </tbody>
+                </table>
+        </div>
+
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-end">
+          {/* <button type="submit" class="btn btn-primary mb-3">Download Invoice</button> */}
+            <button type="submit" class="btn btn-danger mb-3">Submit Payment</button>
             </div>
             </div>
-            </div>
-            </div>
-        </section>
+        </div>
+        </div>
+        </div>
+       
+      </section>
     )
 }
 export default Invoice;
